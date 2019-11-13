@@ -1,8 +1,0 @@
-{
-    "C_Cpp.errorSquiggles": "Enabled",
-    "C_Cpp.intelliSenseEngine": "Tag Parser",
-    "files.associations": {
-        "stdio.h": "c",
-        "esp_spi_flash.h": "c"
-    }
-}
