@@ -1,0 +1,75 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build ESP32 app",
+            "group": "build",
+            "command": "make",
+            "type": "shell",
+            "args": [
+                "app"
+            ],
+            "presentation": {
+                "reveal": "always",
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": "absolute",
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "clean app",
+            "group": "build",
+            "command": "make",
+            "type": "shell",
+            "args": [
+                "app-clean"
+            ],
+            "presentation": {
+                "reveal": "always",
+            },
+        },
+        {
+            "label": "flash app",
+            "group": "build",
+            "command": "make",
+            "type": "shell",
+            "args": [
+                "app-flash"
+            ],
+            "presentation": {
+                "reveal": "always",
+            },
+        },
+        {
+            "label": "monitor",
+            "group": "build",
+            "type":"process",
+            "command": "make monitor",
+            "presentation": {
+                "reveal": "always",
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "menuconfig",
+            "group": "build",
+            "type":"process",
+            "command": "make menuconfig",
+            "presentation": {
+                "reveal": "always",
+            },
+            "problemMatcher": []
+        }
+    ]
+}
